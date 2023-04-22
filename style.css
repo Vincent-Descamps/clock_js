@@ -29,8 +29,8 @@ body
 	box-shadow:
 		0 0 0 4px rgba(0,0,0,0.1)
 		inset 0 0 0 3px #EFEFEF,
-        inset 0 0 10px black,
-        0 0 10px rgba(0,0,0,0.2);
+		inset 0 0 10px black,
+		0 0 10px rgba(0,0,0,0.2);
 }
 
 .clock-face
@@ -41,15 +41,27 @@ body
 	transform: translateY(-3px);
 }
 
-.hand
-{
+.hand {
 	width: 50%;
-	height: 6px;
-	background: rgb(233, 28, 28);
 	position: absolute;
 	top: 50%;
 	transform-origin: 100%;
 	transform: rotate(90deg);
 	transition: all 0.05s;
 	transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hand.hour-hand {
+	height: 12px;
+	background: linear-gradient(to left, rgb(230, 20, 20) 55%, rgba(233, 28, 28, 0) 45%);
+}
+
+.hand.min-hand {
+	height: 8px;
+	background: rgb(215, 78, 24);
+}
+
+.hand.second-hand {
+	height: 4px;
+	background: rgb(1, 1, 1);
 }
